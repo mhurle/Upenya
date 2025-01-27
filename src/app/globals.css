@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 45, 45, 61;
+@layer base {
+  :root {
+    --color-gold: 219 197 128;
+    --color-navy: 45 45 61;
+    --color-turquoise: 77 165 158;
+    --color-grey: 88 88 90;
+  }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  @apply bg-navy text-white;
 }
 
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
+  @apply max-w-7xl mx-auto px-4;
 }
